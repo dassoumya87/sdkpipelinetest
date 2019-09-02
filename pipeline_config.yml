@@ -21,6 +21,8 @@
 
 ### General project setup
 general:
+  productiveBranch: 'master'
+  automaticVersioning: true
 
 
 ### Step-specific configuration
@@ -38,11 +40,11 @@ stages:
 #    nonErpDestinations:
 #      - 'myCustomDestination'
 
-#  productionDeployment:
-#    cfTargets:
-#      - org: 'myOrg'
-#        space: 'mySpace'
-#        apiEndpoint: 'https://'
-#        appName: 'myAppName'
-#        manifest: 'manifest.yml'
-#        credentialsId: 'myDeploymentCredentialsId'
+ productionDeployment:
+   cfTargets:
+     - org: 'I320094trial_trial'
+       space: 'dev'
+       apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+       appName: 'sdkpipelinetest'
+       manifest: 'manifest.yml'
+       credentialsId: 'CF_USER'
